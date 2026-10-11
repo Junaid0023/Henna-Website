@@ -109,11 +109,8 @@ let index = 0;
 
 
 leftArrow.addEventListener("click", () => {
+    testimonials[index].style.transform = `translateX(-${index * 100}px)`;
     index++
-
-    if(index >= testimonials.length){
-        index= 0
-    }
 })
 
 RigthArrow.addEventListener("click", () => {

@@ -569,7 +569,7 @@ button.view-gallery {
     border: 1px solid #F0E4D8;
     box-shadow: 0 5px 18px rgba(107, 62, 38, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    min-width: 500px;
+    min-width: 400px;
 }
 
 .review:hover {
@@ -742,7 +742,88 @@ button.view-gallery {
 /* MEDIA QUERIES */
 
 
-@media  (max-width: 900px ) {
+@media  (max-width: 500px ) {
+    .navLinks {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: var(--primary);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100vh;
+        width: 250px;
+        transition: right 0.3s ease;
+    }
 
+    .navLinks a {
+        display: block;
+        columns: var(--border);
+        color: var(--border);
+        padding: 15px;
+    }
+
+
+    .book-now1 {
+        padding: 3px;
+    }
+
+    .open-menu {
+        display: flex;
+    }
+
+    .open-menu.active {
+        right: 100%;
+    }
+
+    .container {
+        width: var(--container-width-sm);
+    }
+
+    .header {
+        display: grid;
+    }
+
+    .hero-section {
+        width: 100%;
+        text-align: center;
+    }
+
+
+
+    .cta-container {
+        display: grid;
+        place-items: center;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .review {
+        overflow: hidden;
+    }
+
+    .cta-container img {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .cta {
+        width: 100%;
+    }
+
+    .why-content {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .choose-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+
+    .choose-card {
+        width: 100%;
+    }
 }
 
