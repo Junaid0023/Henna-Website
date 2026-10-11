@@ -148,6 +148,7 @@ nav{
     background-color: transparent;
     transition: .3s ease;
     color: #2E1C14;
+    border: 1px solid var(--primary);
 
 }
 
@@ -631,7 +632,13 @@ button.view-gallery {
 
 .booking-page {
     padding: 50px 0;
-    background-color: var(--primary);
+    background: linear-gradient(
+        145deg,
+        #0e0d0c 0%,
+        #6B3E26 100%,
+        #A86B3D 65%,
+        #e6e0d9 35%
+    );
 }
 
 .cta-container {
@@ -681,10 +688,10 @@ button.view-gallery {
     margin-bottom: 50px;
 }
 .accordion-content {
-    background-color: var(--border);
-    padding: 40px;
-    min-width: 500px;
-    box-shadow: 0 0  3px rgba(0, 0, 0, 0.2);
+    /* background-color: var(--border); */
+    /* padding: 40px; */
+    min-width: 350px;
+    /* box-shadow: 0 0  7px rgba(0, 0, 0, 0.2); */
     border-radius: 30px;
 }
 
@@ -693,7 +700,7 @@ button.view-gallery {
     margin-bottom: 10px;
     padding: 20px;
     transition: 3s ease-in;
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
     border-radius: 10px;
 }
 
@@ -715,8 +722,8 @@ button.view-gallery {
     background-color: var(--text);
     font-size: 25px;
     cursor: pointer;
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -728,7 +735,7 @@ button.view-gallery {
     max-height: 0;
     overflow: hidden;
     opacity: 0;
-
+    transition: 0.2s ease;
 }
 
 .answer.active {
@@ -742,38 +749,47 @@ button.view-gallery {
 /* MEDIA QUERIES */
 
 
-@media  (max-width: 500px ) {
+@media  (max-width: 600px ) {
+
+    .socials {
+        display: none;
+    }
     .navLinks {
         position: absolute;
         top: 100%;
-        right: -100%;
+        right: -200%;
         background-color: var(--primary);
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         height: 100vh;
-        width: 250px;
+        width: 350px;
         transition: right 0.3s ease;
+       
     }
 
     .navLinks a {
         display: block;
         columns: var(--border);
         color: var(--border);
-        padding: 15px;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--background);
+   
     }
 
 
     .book-now1 {
-        padding: 3px;
+        padding: 7px 8px;
+        border-radius: 15px;
+        background-color: var(--background);
     }
 
     .open-menu {
         display: flex;
     }
 
-    .open-menu.active {
-        right: 100%;
+    .active {
+        right: 0;
     }
 
     .container {
@@ -784,9 +800,33 @@ button.view-gallery {
         display: grid;
     }
 
+
     .hero-section {
         width: 100%;
         text-align: center;
+    }
+
+    .hero-h1 {
+        text-align: center;
+        font-size: 4rem;
+    }
+
+    .hero-p{
+        font-size: small;
+        line-height: 20.4px;
+    }
+
+    .image-box {
+        width: 100%;
+        gap:10px;
+    }
+
+    .cta-btns  {
+       display: flex;
+       flex-direction: column;
+       gap: 0;
+      
+       /* background-color: #4C8C4A; */
     }
 
 
@@ -824,6 +864,18 @@ button.view-gallery {
 
     .choose-card {
         width: 100%;
+    }
+
+    .faq heading{
+        font-size: 0.5rem;
+    }
+
+    .question {
+        font-size: small;
+    }
+
+    .answer {
+        font-size: small;
     }
 }
 
